@@ -1,0 +1,142 @@
+:root {
+  --bg: #0F1B2B;
+  --panel: #FFFFFF;
+  --ink: #16202E;
+  --muted: #6B7684;
+  --line: #E3E7EC;
+  --accent: #2F6F5E;
+  --accent-hover: #255A4C;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  background-image: radial-gradient(circle at 20% 20%, #16283D 0%, var(--bg) 55%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  padding: 24px;
+}
+
+header h1 {
+  color: #F2F5F8;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 0 0 24px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  background: var(--panel);
+  width: 100%;
+  max-width: 360px;
+  padding: 32px 28px 28px;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 45px rgba(6, 14, 24, 0.35);
+}
+
+section h2 {
+  margin: 0 0 22px;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: #FAFBFC;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(47, 111, 94, 0.15);
+  background: #fff;
+}
+
+a {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+
+a:hover { text-decoration: underline; }
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+button[type="submit"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+button[type="submit"]:hover { background: var(--accent-hover); }
+
+h3 {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin: 18px 0;
+  position: relative;
+}
+
+h3::before, h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: var(--line);
+}
+
+h3::before { left: 0; }
+h3::after { right: 0; }
+
+.secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
